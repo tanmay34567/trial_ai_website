@@ -28,16 +28,16 @@ const features = [
 
 export default function FeaturesSection() {
   return (
-    <section id="about" className="py-24 bg-edu-primary relative">
-      <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+    <section id="about" className="section-padding bg-edu-primary relative">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left: Content */}
           <div>
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="font-display text-4xl md:text-5xl font-bold text-white mb-8"
+              className="font-display text-3xl md:text-5xl font-bold text-white mb-6 md:mb-8"
             >
               Why Choose <br />
               <span className="text-edu-accent">Matrix Education?</span>

@@ -104,27 +104,27 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="z-10 max-w-4xl"
           >
-            <h1 className="font-display mb-6 text-5xl font-bold md:text-7xl lg:text-8xl">
+            <h1 className="font-display mb-4 md:mb-6 text-4xl sm:text-5xl md:text-7xl lg:text-8xl">
               <span className="text-white">Transform Your</span>
               <br />
               <span className="text-gradient">Academic Journey</span>
             </h1>
-            <p className="font-sans mb-10 text-lg text-edu-text md:text-xl lg:text-2xl max-w-2xl mx-auto opacity-80">
+            <p className="font-sans mb-8 md:mb-10 text-base sm:text-lg md:text-xl lg:text-2xl max-w-2xl mx-auto opacity-80">
               Expert Coaching for Classes 8–12. We build the foundation for 
               Board Exams and Competitive excellence.
             </p>
-            <div className="flex flex-wrap justify-center gap-6">
+            <div className="flex flex-col sm:flex-row justify-center gap-4 md:gap-6">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-edu-accent hover:bg-blue-600 px-8 py-4 rounded-full font-bold text-lg text-white shadow-lg shadow-blue-500/20 transition-all"
+                className="bg-edu-accent hover:bg-blue-600 px-6 md:px-8 py-3 md:py-4 rounded-full font-bold text-base md:text-lg text-white shadow-lg shadow-blue-500/20 transition-all"
               >
                 Enroll Now
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="border border-white/20 hover:bg-white/10 px-8 py-4 rounded-full font-bold text-lg text-white backdrop-blur-sm transition-all"
+                className="border border-white/20 hover:bg-white/10 px-6 md:px-8 py-3 md:py-4 rounded-full font-bold text-base md:text-lg text-white backdrop-blur-sm transition-all"
               >
                 View Courses
               </motion.button>

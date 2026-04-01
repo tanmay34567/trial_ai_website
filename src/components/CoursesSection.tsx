@@ -36,15 +36,15 @@ const courses = [
 
 export default function CoursesSection() {
   return (
-    <section id="courses" className="py-24 bg-edu-secondary">
-      <div className="container mx-auto px-6">
-        <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-6">
+    <section id="courses" className="section-padding bg-edu-secondary">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="flex flex-col md:flex-row items-start md:items-end justify-between mb-12 md:mb-16 gap-8 md:gap-6">
           <div className="max-w-xl">
             <motion.h2 
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="font-display text-4xl md:text-5xl font-bold text-white mb-6"
+              className="font-display text-3xl md:text-5xl font-bold text-white mb-6"
             >
               Academic Programs <br />
               <span className="text-gradient">Tailored for Success</span>
@@ -54,13 +54,13 @@ export default function CoursesSection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-edu-text/60 text-lg"
+              className="text-edu-text/60 text-base md:text-lg"
             >
               Choose from our curated range of courses designed to bring out the 
               best in every student.
             </motion.p>
           </div>
-          <button className="bg-edu-accent hover:bg-blue-600 px-8 py-3 rounded-full font-bold text-white transition-all whitespace-nowrap">
+          <button className="w-full sm:w-auto bg-edu-accent hover:bg-blue-600 px-8 py-3 rounded-full font-bold text-white transition-all whitespace-nowrap text-center">
             Download Prospectus
           </button>
         </div>

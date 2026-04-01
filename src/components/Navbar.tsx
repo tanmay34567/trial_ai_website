@@ -28,17 +28,17 @@ export default function Navbar() {
   return (
     <nav 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "py-4 bg-edu-primary/80 backdrop-blur-md border-b border-white/10" : "py-6 bg-transparent"
+        scrolled ? "py-3 md:py-4 bg-edu-primary/80 backdrop-blur-md border-b border-white/10" : "py-5 md:py-6 bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-6 flex items-center justify-between">
+      <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 bg-edu-accent rounded-xl flex items-center justify-center font-bold text-white text-xl group-hover:rotate-12 transition-transform shadow-lg shadow-blue-500/20">
+          <div className="w-8 h-8 md:w-10 md:h-10 bg-edu-accent rounded-lg md:rounded-xl flex items-center justify-center font-bold text-white text-lg md:text-xl group-hover:rotate-12 transition-transform shadow-lg shadow-blue-500/20">
             M
           </div>
-          <span className="font-display text-2xl font-bold tracking-tight text-white">
-            MATRIX <span className="text-edu-accent italic">EDUCATION</span>
+          <span className="font-display text-xl md:text-2xl font-bold tracking-tight text-white">
+            MATRIX <span className="text-edu-accent italic hidden sm:inline">EDUCATION</span>
           </span>
         </Link>
 

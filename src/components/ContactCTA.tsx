@@ -5,61 +5,61 @@ import { Mail, MapPin, Phone, Send } from "lucide-react";
 
 export default function ContactCTA() {
   return (
-    <section id="contact" className="py-24 bg-edu-primary relative">
-      <div className="container mx-auto px-6">
+    <section id="contact" className="section-padding bg-edu-primary relative">
+      <div className="container mx-auto px-4 md:px-6">
         <motion.div
            initial={{ opacity: 0, y: 20 }}
            whileInView={{ opacity: 1, y: 0 }}
            viewport={{ once: true }}
-           className="bg-gradient-to-br from-edu-secondary via-edu-primary to-edu-secondary rounded-[60px] p-10 md:p-20 relative overflow-hidden ring-1 ring-white/5"
+           className="bg-gradient-to-br from-edu-secondary via-edu-primary to-edu-secondary rounded-[30px] md:rounded-[60px] p-8 md:p-16 lg:p-20 relative overflow-hidden ring-1 ring-white/5"
         >
           {/* Background shapes */}
           <div className="absolute -top-20 -right-20 w-[400px] h-[400px] bg-edu-accent/10 rounded-full blur-[100px]" />
           <div className="absolute -bottom-20 -left-20 w-[300px] h-[300px] bg-edu-gold/10 rounded-full blur-[80px]" />
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 relative z-10">
             {/* Left: Content */}
             <div className="flex flex-col justify-center">
-              <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8">
+              <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 md:mb-8">
                 Ready to Join <span className="text-edu-gold italic">the Next Batch?</span>
               </h2>
-              <p className="text-edu-text/60 text-lg mb-12 max-w-lg">
+              <p className="text-edu-text/60 text-base md:text-lg mb-8 md:mb-12 max-w-lg">
                 Limited seats available for the upcoming session. Secure your 
                 admission today and transform your future.
               </p>
               
-              <div className="space-y-6">
+              <div className="space-y-4 md:space-y-6">
                  <div className="flex items-center gap-4 text-white">
-                   <div className="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center text-edu-accent">
-                     <Phone size={24} />
+                   <div className="w-10 h-10 md:w-12 md:h-12 bg-white/5 rounded-xl flex items-center justify-center text-edu-accent">
+                     <Phone size={20} />
                    </div>
-                   <div className="text-xl font-bold">+91 98765 43210</div>
+                   <div className="text-lg md:text-xl font-bold">+91 98765 43210</div>
                  </div>
                  <div className="flex items-center gap-4 text-white">
-                   <div className="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center text-edu-accent">
-                     <Mail size={24} />
+                   <div className="w-10 h-10 md:w-12 md:h-12 bg-white/5 rounded-xl flex items-center justify-center text-edu-accent">
+                     <Mail size={20} />
                    </div>
-                   <div className="text-xl font-bold">admission@matrix.edu</div>
+                   <div className="text-lg md:text-xl font-bold">admission@matrix.edu</div>
                  </div>
                  <div className="flex items-center gap-4 text-white">
-                   <div className="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center text-edu-accent">
-                     <MapPin size={24} />
+                   <div className="w-10 h-10 md:w-12 md:h-12 bg-white/5 rounded-xl flex items-center justify-center text-edu-accent">
+                     <MapPin size={20} />
                    </div>
-                   <div className="text-lg">City Center Mall, Pune, Maharashtra</div>
+                   <div className="text-base md:text-lg">City Center Mall, Pune</div>
                  </div>
               </div>
             </div>
 
             {/* Right: Form */}
-            <div className="glass-morphism p-10 rounded-[40px] border-white/5 border-t-white/10 shadow-2xl">
-              <h3 className="text-2xl font-bold text-white mb-8">Send an Inquiry</h3>
-              <form className="space-y-6">
+            <div className="glass-morphism p-6 md:p-10 rounded-[30px] md:rounded-[40px] border-white/5 border-t-white/10 shadow-2xl">
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-6 md:mb-8">Send an Inquiry</h3>
+              <form className="space-y-4 md:space-y-6">
                 <div>
-                  <label className="block text-sm font-medium text-edu-text/60 mb-2">FULL NAME</label>
+                  <label className="block text-xs md:text-sm font-medium text-edu-text/60 mb-2">FULL NAME</label>
                   <input 
                     type="text" 
                     placeholder="John Doe"
-                    className="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 text-white focus:outline-none focus:border-edu-accent transition-all"
+                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 md:px-6 py-3 md:py-4 text-white focus:outline-none focus:border-edu-accent transition-all"
                   />
                 </div>
                 <div>

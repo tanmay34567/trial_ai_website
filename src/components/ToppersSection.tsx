@@ -12,17 +12,17 @@ const toppers = [
 
 export default function ToppersSection() {
   return (
-    <section id="results" className="py-24 bg-edu-primary relative overflow-hidden">
+    <section id="results" className="section-padding bg-edu-primary relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-edu-accent/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2" />
+      <div className="absolute top-0 right-0 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-edu-accent/10 rounded-full blur-[100px] md:blur-[120px] -translate-y-1/2 translate-x-1/2" />
       
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-16">
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
+        <div className="text-center mb-12 md:mb-16">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4"
+            className="font-display text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4"
           >
             Proven Results <span className="text-edu-gold">That Speak</span>
           </motion.h2>

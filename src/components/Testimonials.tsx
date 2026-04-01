@@ -37,28 +37,28 @@ export default function Testimonials() {
   }, [index]);
 
   return (
-    <section className="py-24 bg-edu-secondary overflow-hidden">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
+    <section className="section-padding bg-edu-secondary overflow-hidden">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="text-center mb-12 md:mb-16">
           <motion.div 
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="w-16 h-16 bg-edu-accent/10 rounded-full flex items-center justify-center mx-auto mb-6"
+            className="w-12 h-12 md:w-16 md:h-16 bg-edu-accent/10 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6"
           >
-            <Quote className="text-edu-accent" size={32} />
+            <Quote className="text-edu-accent" size={24} />
           </motion.div>
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="font-display text-4xl md:text-5xl font-bold text-white mb-4"
+            className="font-display text-3xl md:text-5xl font-bold text-white mb-4"
           >
             Stories of <span className="text-edu-accent italic">Success</span>
           </motion.h2>
         </div>
 
-        <div className="relative max-w-4xl mx-auto px-12">
+        <div className="relative max-w-4xl mx-auto md:px-12">
           <AnimatePresence mode="wait">
             <motion.div
               key={index}
@@ -66,23 +66,23 @@ export default function Testimonials() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -20 }}
               transition={{ duration: 0.5 }}
-              className="glass-morphism p-10 md:p-16 rounded-[40px] text-center border-white/5"
+              className="glass-morphism p-8 md:p-16 rounded-[30px] md:rounded-[40px] text-center border-white/5"
             >
-              <div className="flex justify-center gap-1 mb-8">
+              <div className="flex justify-center gap-1 mb-6 md:mb-8">
                 {[...Array(testimonials[index].rating)].map((_, i) => (
-                  <Star key={i} className="text-edu-gold fill-edu-gold" size={20} />
+                  <Star key={i} className="text-edu-gold fill-edu-gold" size={16} />
                 ))}
               </div>
               
-              <blockquote className="text-2xl md:text-3xl font-display italic text-white/90 leading-relaxed mb-10">
+              <blockquote className="text-lg md:text-3xl font-display italic text-white/90 leading-relaxed mb-8 md:mb-10">
                 "{testimonials[index].text}"
               </blockquote>
               
               <div className="text-center">
-                <div className="text-xl font-bold text-white mb-1">
+                <div className="text-lg md:text-xl font-bold text-white mb-1">
                   {testimonials[index].name}
                 </div>
-                <div className="text-edu-accent font-medium text-sm">
+                <div className="text-edu-accent font-medium text-xs md:text-sm">
                   {testimonials[index].role}
                 </div>
               </div>
@@ -90,18 +90,20 @@ export default function Testimonials() {
           </AnimatePresence>
 
           {/* Controls */}
-          <button 
-            onClick={prev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full glass-morphism flex items-center justify-center text-white hover:bg-edu-accent transition-all z-10"
-          >
-            <ChevronLeft />
-          </button>
-          <button 
-            onClick={next}
-            className="absolute right-0 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full glass-morphism flex items-center justify-center text-white hover:bg-edu-accent transition-all z-10"
-          >
-            <ChevronRight />
-          </button>
+          <div className="flex justify-center md:block mt-8 md:mt-0 gap-4">
+            <button 
+              onClick={prev}
+              className="md:absolute md:left-0 md:top-1/2 md:-translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full glass-morphism flex items-center justify-center text-white hover:bg-edu-accent transition-all z-10"
+            >
+              <ChevronLeft size={20} />
+            </button>
+            <button 
+              onClick={next}
+              className="md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full glass-morphism flex items-center justify-center text-white hover:bg-edu-accent transition-all z-10"
+            >
+              <ChevronRight size={20} />
+            </button>
+          </div>
           
           {/* Progress indicators */}
           <div className="flex justify-center gap-2 mt-10">
